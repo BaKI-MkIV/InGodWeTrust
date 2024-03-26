@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonOne"
         android:layout_width="313dp"
         android:layout_height="48dp"
         android:text="bibis plus"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.455" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonTwo"
         android:layout_width="313dp"
         android:layout_height="48dp"
         android:text="destroy bibis"
@@ -44,10 +44,10 @@
         app:layout_constraintGuide_begin="205dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="bibis?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
