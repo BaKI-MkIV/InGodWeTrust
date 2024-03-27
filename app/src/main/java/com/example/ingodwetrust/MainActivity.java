@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
     private Button buttonplusplus;
     private Button infobutton;
     private int count = 0;
+    private String str;
 
 //    @Override
 //    public void onCountReceived(int count) {
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
         button2 = findViewById(R.id.buttonTwo);
         buttonplusplus = findViewById(R.id.buttonOne2);
         infobutton = findViewById(R.id.infobutton);
+        str = " Bibis находится на рассмотрении";
 
 
         // Устанавливаем слушатель для первой кнопки
@@ -48,14 +50,14 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
             @Override
             public void onClick(View v) {
                 count++;
-                editText.setText("You have " + count + " bibis");
+                editText.setText(count + str);
             }
         });
         buttonplusplus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count += 2;
-                editText.setText("You have " + count + " bibis");
+                count += 12;
+                editText.setText(count + str);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,6 @@
 package com.example.ingodwetrust;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class ForestAcrivityActivity extends AppCompatActivity {
     private TextView Its;
     private TextView wasdestroyed;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +30,9 @@ public class ForestAcrivityActivity extends AppCompatActivity {
 
 //        int count = getIntent().getIntExtra("count", 0);
 
-        Its.setText(count + " bibis died by your hands. \nTests show that you are a very bad " +
-                "person. \nAt the same time, we didn’t even test for this.");
-        wasdestroyed.setText(alls + " were destroyed during all this time. Are you happy now?");
+        Its.setText(count + " погибло из-за запуска модуля 'MagicWand'." +
+                        "\nТесты показали, что вы 'Очень плохой человек'" +
+                "\nЭто при учете, что мы на это даже не тестировали. Честно.");
+        wasdestroyed.setText(alls + " bibis погибло за последние исследования. Вы агент Alt-bibis?");
     }
 }
