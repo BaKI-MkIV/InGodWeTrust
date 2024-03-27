@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 
 
-public class MainActivity extends AppCompatActivity implements fromHereToNotHere {
+public class MainActivity extends AppCompatActivity /*implements fromHereToNotHere {
 
     private TextView editText;
     private Button button;
@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity implements fromHereToNotHere
     private Button buttonplusplus;
     private int count = 0;
 
-    @Override
-    public void onCountReceived(int count) {
-        Intent intent = new Intent(this, ForestAcrivityActivity.class);
-        intent.putExtra("count", count);
-        startActivity(intent); // Запускаем активити ForestAcrivityActivity
-    }
+//    @Override
+//    public void onCountReceived(int count) {
+//        Intent intent = new Intent(this, ForestAcrivityActivity.class);
+//        intent.putExtra("count", count);
+//        startActivity(intent); // Запускаем активити ForestAcrivityActivity
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
