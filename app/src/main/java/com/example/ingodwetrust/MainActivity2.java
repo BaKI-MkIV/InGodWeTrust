@@ -15,13 +15,23 @@ public class MainActivity2 extends AppCompatActivity {
 
         // Находим кнопку второй активити
         Button returnButton = findViewById(R.id.savebutton);
+        Button forest = findViewById(R.id.toforest);
 
         // Устанавливаем слушатель для кнопки
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 // Создаем Intent для возвращения к предыдущей активити
                 Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        forest.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Создаем Intent для возвращения к предыдущей активити
+                Intent intent = new Intent(MainActivity2.this, ForestAcrivityActivity.class);
                 startActivity(intent);
             }
         });
