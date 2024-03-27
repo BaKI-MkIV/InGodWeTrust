@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
     private Button button;
     private Button button2;
     private Button buttonplusplus;
+    private Button infobutton;
     private int count = 0;
 
 //    @Override
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
         button = findViewById(R.id.buttonOne);
         button2 = findViewById(R.id.buttonTwo);
         buttonplusplus = findViewById(R.id.buttonOne2);
+        infobutton = findViewById(R.id.infobutton);
+
 
         // Устанавливаем слушатель для первой кнопки
         button.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +65,14 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
                 CountSingleton.getInstance().setCount(count);
                 CountSingleton.getInstance().CountUpdate();
                 Intent intent = new Intent(MainActivity.this, AfterDestroyActivity.class);
+                startActivity(intent); // Запускаем активити AfterDestroyActivity
+            }
+        });
+
+        infobutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, experimentsActive.class);
                 startActivity(intent); // Запускаем активити AfterDestroyActivity
             }
         });
