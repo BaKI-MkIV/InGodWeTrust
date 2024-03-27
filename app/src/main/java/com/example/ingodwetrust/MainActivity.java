@@ -9,7 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 
 
-public class MainActivity extends AppCompatActivity /*implements fromHereToNotHere {
+
+public class MainActivity extends AppCompatActivity /*implements fromHereToNotHere*/ {
+
+
 
     private TextView editText;
     private Button button;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         // Инициализируем views
@@ -54,7 +58,9 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCountReceived(count); // Вызываем метод для передачи count
+                //onCountReceived(count); // Вызываем метод для передачи count
+                CountSingleton.getInstance().setCount(count);
+                CountSingleton.getInstance().CountUpdate();
                 Intent intent = new Intent(MainActivity.this, AfterDestroyActivity.class);
                 startActivity(intent); // Запускаем активити AfterDestroyActivity
             }
