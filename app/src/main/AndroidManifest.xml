@@ -16,7 +16,7 @@
             android:name=".ForestAcrivityActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".AfterDestroyActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

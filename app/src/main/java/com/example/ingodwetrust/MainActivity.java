@@ -3,20 +3,26 @@ package com.example.ingodwetrust;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements fromHereToNotHere {
 
     private TextView editText;
     private Button button;
     private Button button2;
     private Button buttonplusplus;
     private int count = 0;
+
+    @Override
+    public void onCountReceived(int count) {
+        Intent intent = new Intent(this, ForestAcrivityActivity.class);
+        intent.putExtra("count", count);
+        startActivity(intent); // Запускаем активити ForestAcrivityActivity
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Создаем Intent для запуска новой активити
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(intent);
+                onCountReceived(count); // Вызываем метод для передачи count
+                Intent intent = new Intent(MainActivity.this, AfterDestroyActivity.class);
+                startActivity(intent); // Запускаем активити AfterDestroyActivity
             }
         });
     }

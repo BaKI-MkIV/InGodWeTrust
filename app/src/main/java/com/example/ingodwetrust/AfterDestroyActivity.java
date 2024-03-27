@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+public class AfterDestroyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
 
             public void onClick(View v) {
                 // Создаем Intent для возвращения к предыдущей активити
-                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                Intent intent = new Intent(AfterDestroyActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
         forest.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Создаем Intent для возвращения к предыдущей активити
-                Intent intent = new Intent(MainActivity2.this, ForestAcrivityActivity.class);
+                Intent intent = new Intent(AfterDestroyActivity.this, ForestAcrivityActivity.class);
                 startActivity(intent);
             }
         });

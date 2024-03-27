@@ -13,9 +13,18 @@ import android.os.Bundle;
 
 public class ForestAcrivityActivity extends AppCompatActivity {
 
+    private TextView Its;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forest_acrivity);
+
+        Its = findViewById(R.id.youre_cruel);
+
+        int count = getIntent().getIntExtra("count", 0);
+
+        Its.setText(count + " bibis died by your hands. \nTests show that you are a very bad " +
+                "person. \nAt the same time, we didn’t even test for this.");
     }
 }
