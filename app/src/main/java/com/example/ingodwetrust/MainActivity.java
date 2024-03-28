@@ -1,12 +1,12 @@
 package com.example.ingodwetrust;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 
 
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
     private Button button2;
     private Button buttonplusplus;
     private Button infobutton;
+    private Button fragtest;
     private int count = 0;
     private String str;
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
         button2 = findViewById(R.id.buttonTwo);
         buttonplusplus = findViewById(R.id.buttonOne2);
         infobutton = findViewById(R.id.infobutton);
+        fragtest = findViewById(R.id.fragtest);
         str = " Bibis находится на рассмотрении";
 
 
@@ -76,6 +78,14 @@ public class MainActivity extends AppCompatActivity /*implements fromHereToNotHe
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, experimentsActive.class);
                 startActivity(intent); // Запускаем активити AfterDestroyActivity
+            }
+        });
+
+        fragtest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, its_activity_for_fragment.class);
+                startActivity(intent);
             }
         });
     }

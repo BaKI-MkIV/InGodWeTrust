@@ -4,6 +4,7 @@ public class CountSingleton {
     private static CountSingleton instance;
     private int count;
     private int allcount;
+    public String neededstring;
 
     private CountSingleton() {
 
@@ -32,5 +33,12 @@ public class CountSingleton {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public void setString(String thisget) {
+        this.neededstring = thisget;
+    }
+    public String getString() {
+        return neededstring;
     }
 }
